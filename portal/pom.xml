@@ -212,7 +212,7 @@
         <filter>../src/main/resources/portal.properties</filter>
         <filter>../src/main/resources/maven.properties</filter>
     </filters>
-    
+
     <!-- prevent some resources from getting into war -->
     <resources>
       <resource>
@@ -288,6 +288,12 @@
             </executions>
           </plugin>
         </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>openshift</id>
+      <build>
+        <directory>/tmp/src/target</directory>
       </build>
     </profile>
   </profiles>
